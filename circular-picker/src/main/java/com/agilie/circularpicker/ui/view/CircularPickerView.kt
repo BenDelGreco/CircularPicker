@@ -152,6 +152,7 @@ class CircularPickerView : View, View.OnTouchListener, CircularPickerContract.Vi
     override fun onTouch(v: View, event: MotionEvent): Boolean {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> touchListener?.onViewTouched(PointF(event.x, event.y), event)
+            MotionEvent.ACTION_UP -> touchListener?.onViewTouched(PointF(event.x, event.y), event)
 
         }
         return behavior.onTouchEvent(event)
